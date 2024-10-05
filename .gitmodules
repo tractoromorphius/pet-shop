@@ -1,0 +1,6 @@
+[submodule "shop-back"]
+	path = shop-back
+	url = https://github.com/tractoromorphius/shop-back.git
+[submodule "angular-shop"]
+	path = angular-shop
+	url = https://github.com/tractoromorphius/angular-shop.git
