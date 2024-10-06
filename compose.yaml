@@ -13,10 +13,10 @@ services:
       DATABASE_URL: ${DATABASE_URL}
     develop:
       watch:
-        - path: ./src/
+        - path: ./shop-back/src/
           action: sync
           target: /app/src/
-        - path: ./node_modules/
+        - path: ./shop-back/node_modules/
           action: sync+restart
           target: ./node_modules/
   angular:
@@ -26,6 +26,11 @@ services:
       context: ./angular-shop
     ports:
       - ${ANGULAR_PORT}:4200
+    develop:
+      watch:
+        - path: ./angular-shop/src/
+          action: sync
+          target: /app/src
   db:
     image: postgres:alpine
     restart: always
