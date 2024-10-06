@@ -23,7 +23,7 @@ services:
     image: angular
     restart: always
     build:
-      context: ./angular-shop/shop/
+      context: ./angular-shop
     ports:
       - ${ANGULAR_PORT}:4200
   db:
