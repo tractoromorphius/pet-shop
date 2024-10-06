@@ -19,6 +19,13 @@ services:
         - path: ./node_modules/
           action: sync+restart
           target: ./node_modules/
+  angular:
+    image: angular
+    restart: always
+    build:
+      context: ./angular-shop/shop/
+    ports:
+      - ${ANGULAR_PORT}:4200
   db:
     image: postgres:alpine
     restart: always
